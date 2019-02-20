@@ -1,0 +1,41 @@
+<div class="title_banner">
+  <p id="notice"><%= notice %></p>
+  <h1>Characters</h1>
+</div>
+
+<ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li><a href="about">About Us</a></li>
+  <li><a href="roll">Challenge</a></li>  
+  <li><a href="help">Help Me!</a></li>
+</ul>
+
+<div class="directory">
+  <table>
+    <thead>
+      <tr>
+        <th>Color</th>
+        <th>Descriptor</th>
+        <th>Name</th>
+        <th>Appendage</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @characters.each do |character| %>
+        <tr>
+          <td><%= character.color %></td>
+          <td><%= character.descriptor %></td>
+          <td><%= character.name %></td>
+          <td><%= character.appendage %></td>
+          <td><%= link_to 'Show', character %></td>
+          <td><%= link_to 'Edit', edit_character_path(character) %></td>
+          <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Character', new_character_path %>
+</div>

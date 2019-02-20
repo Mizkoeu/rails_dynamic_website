@@ -1,3 +1,16 @@
-<h1>Dice Result</h1>
-<p><%= @result %></p>
-<p><%= link_to "Roll again", "/roll" %></p>
+<div class="title_banner">
+    <h1>Here's your challenge, DRAW THIS NOW!</h1>
+    <p>You have 30 seconds to complete a drawing based on the description below.</p>
+</div>
+
+<ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li><a href="about">About Us</a></li>
+  <li><a href="roll">Challenge</a></li>  
+  <li><a href="help">Help Me!</a></li>
+</ul>
+
+<div class="directory">
+  <p id="result"><%= @result %></p>
+  <p><%= link_to "Roll again", "/roll" %></p> 
+</div>

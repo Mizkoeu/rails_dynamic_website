@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  
+  resources :characters
   get '/' => 'static_pages#home'
 
   get '/about' => 'static_pages#about'

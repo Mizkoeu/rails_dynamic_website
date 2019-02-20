@@ -1,2 +1,25 @@
-<h1>Welcome to the Dice Rolling Game</h1>
-<p><%= link_to "Roll the dice", "/roll" %></p>
+<div class="title_banner">
+    <h1>Welcome to the Random Character Drawing Challenge</h1>
+    <p>You can either create new characters or pick a random challenge. When you 
+    pick a random challenge, we will match different properties of existing characters 
+    in the database, and create a brand new character for you to draw. Let you imagination
+    guide you through this challenge! And don't forget to have fun along the way!</p>
+</div>
+
+<ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li><a href="about">About Us</a></li>
+  <li><a href="roll">Challenge</a></li>  
+  <li><a href="help">Help Me!</a></li>
+</ul>
+
+<div class="button">
+    <p class="big"><%= link_to "Add a character!", "/characters/new" %></p>
+</div>
+<div class="button">
+    <p class="big"><%= link_to "See existing characters", "/characters/" %></p>
+</div>
+<div class="button">
+    <p class="big"><%= link_to "Give me a challenge!!!", "/roll" %></p>
+</div>
+

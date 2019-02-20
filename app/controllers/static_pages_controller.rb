@@ -10,7 +10,11 @@ class StaticPagesController < ApplicationController
   end
 
   def roll
-    @result = (1..6).to_a.shuffle.first
+    color = Character.all.to_a.shuffle.first.color
+    descriptor = Character.all.to_a.shuffle.first.descriptor
+    name = Character.all.to_a.shuffle.first.name
+    appendage = Character.all.to_a.shuffle.first.appendage
+    @result = "Please draw a #{color} #{descriptor} #{name} with #{appendage}."
   end
   
 end

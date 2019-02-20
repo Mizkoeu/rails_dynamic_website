@@ -1,5 +1,6 @@
 <div class="title_banner">
-    <h1>StaticPages#help</h1>
+    <p id="notice">Create your own character here</p>
+    <h1>New Character</h1>
 </div>
 
 <ul class="nav">
@@ -9,4 +10,8 @@
   <li><a href="help">Help Me!</a></li>
 </ul>
 
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<div class="directory">
+    <%= render 'form', character: @character %>
+
+    <%= link_to 'Back', characters_path %>
+</div>
